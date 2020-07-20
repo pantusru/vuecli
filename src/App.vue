@@ -1,47 +1,38 @@
 <template>
   <div id="app">
     <header class="header">
-      <div class="conteiner">
-          <headerTop/>  
-          <headerBottom/>
-          <headerNav/> 
-      </div>
+        <headerTop/>  
+        <headerBottom/>
+        <headerNav/> 
     </header>
     <router-view/>
-    <footer>
-      
+    <footer class="footer">
+      <div class="conteiner">
+        <footerMainVue/>
+      </div>
     </footer>
   </div>
 </template>
 
 <style lang="sass">
-  *
-    padding: 0
-    margin: 0
-    box-sizing: border-box
-  img
-    width: 100%
-    height: auto
-  body
-    font-family: 'Open Sans'
-  .conteiner
-    max-width: 1170px
-    margin: 0 auto
-    padding: 0 15px
-  .header
-    background: #F7F7F7
-    padding: 5px 0
+  @import "@/sass/reset"
+  @import "@/sass/smart-grid"
+  @import "@/sass/link"
+  .footer
+    margin-top: 80px
 </style>
 
 <script>
 import headerTopVue from './components/header/headerTop.vue'
 import headerBottomVue from './components/header/headerBottom.vue'
-import headerNavVue from './components/headerNav.vue'
+import headerNavVue from './components/header/headerNav.vue'
+import footerMainVue from './components/footer/footerMain.vue'
 export default {
   components:{
     headerTop: headerTopVue,
     headerBottom: headerBottomVue,
-    headerNav :headerNavVue
+    headerNav :headerNavVue,
+    footerMainVue: footerMainVue
   }
 }
 </script>

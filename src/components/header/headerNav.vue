@@ -1,7 +1,9 @@
 <template>
+<div class="conteiner">
     <div class="nav-header">
         <router-link v-for="link in links" :key ="link.id" class="link-nav" :to="link.href">{{ link.name}} </router-link>
     </div>
+</div>
 </template>
 
 <script>
@@ -30,5 +32,5 @@ export default {
         display: flex
         justify-content: space-between
         .link-nav
-             
+            color: #555             
 </style>
