@@ -8,6 +8,7 @@
       <SectionContentVue/>
       <SectionAdvantageVue/>
       <SectionPopularVue/>
+      <SectionNews/>
     </div>
   </div>
 </template>
@@ -23,6 +24,7 @@ import SectionDealersVue from '../components/home/SectionDealers.vue';
 import SectionContentVue from '../components/home/SectionContent.vue';
 import SectionAdvantageVue from '../components/home/SectionAdvantage.vue';
 import SectionPopularVue from '../components/home/SectionPopular.vue';
+import  SectionNews from '../components/home/SectionNews.vue';
 
 
 import { RepositoryFactory } from './../axios/RepositoryFactory'
@@ -43,6 +45,7 @@ export default {
     SectionContentVue:SectionContentVue,
     SectionAdvantageVue: SectionAdvantageVue,
     SectionPopularVue: SectionPopularVue,
+    SectionNews: SectionNews,
     
   },
   created () {
@@ -50,7 +53,8 @@ export default {
   },
   methods: {
       async fetch (){
-       console.log(await UserRepository.protected());
+        //  console.log( await UserRepository.login());
+        console.log( await UserRepository.protected());
     }
   }
 }

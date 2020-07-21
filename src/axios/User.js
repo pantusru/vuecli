@@ -13,6 +13,9 @@ export default {
             console.log(response);
         });
     },
+    logout(){
+        localStorage.removeItem('token')
+    },
     protected(){
         return Repository.post("/api/protected")
     },

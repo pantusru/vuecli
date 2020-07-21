@@ -1,7 +1,5 @@
-import PostsRepository from "./Post";
 import UserRepository from "./User";
 const repositories = {
-  posts: PostsRepository,
   user: UserRepository,
   // other repositories ...
 };
