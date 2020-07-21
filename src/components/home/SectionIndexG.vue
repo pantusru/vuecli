@@ -39,16 +39,16 @@ export default {
 </script>
  
 <style lang="sass">
-    @import "@/sass/smart-grid"
     .col-6
         +size(6)
         padding-bottom: 100px
         &:nth-child(2),  &:nth-child(1)
             margin-bottom: 30px
-        .categoria-title
-            color: #fff
-            &:hover
-                color: #000
+        &.bg, &.bg-red
+            .categoria-title
+                color: #fff
+                &:hover
+                    color: #000
         &.bg
             color: #fff
             background-color: #305f97
@@ -62,14 +62,14 @@ export default {
                     color: #fff
                     background: linear-gradient(to right, rgba(155,166,180,1) 0%, rgba(112,128,147,1) 120%)
         &.bg-red
-            position: relative
-            // padding-bottom: 30px
             box-shadow: 10px 17px 30px rgba(0, 0, 0, 0.05)
             background-image: url(../../../public/img/home-car-7.png)
             background-repeat: no-repeat
             background-size: cover
             .categoria-title
                 text-align: center
+                display: block
+                margin-top: 15px
         .categoria-img
             top: 10%
             width: 50%

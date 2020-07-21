@@ -36,7 +36,6 @@ export default {
 </script>
 
 <style lang="sass">
-    @import "@/sass/smart-grid"
     .title-content
         line-height: 28px
         font-size: 24px

@@ -35,7 +35,6 @@ export default {
 </script>
 
 <style lang="sass">
-    @import "@/sass/smart-grid"
     .header-bottom
         margin-top: 40px
         margin-bottom: 20px

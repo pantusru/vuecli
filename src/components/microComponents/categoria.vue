@@ -24,6 +24,8 @@ export default {
 </script>
 
 <style lang="sass">
+    .categoria-content
+        +size(8)
     .categoria-title
         color: #2e414d
         line-height: 28px
@@ -51,7 +53,7 @@ export default {
         justify-content: space-between
         .categoria-content
             .categoria-ul
-                width: 100%
+                +size(12)
                 display: flex
                 flex-direction: column
         .categoria-img

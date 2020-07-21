@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style lang="sass">
-    @import "@/sass/smart-grid"
     @import "@/sass/footer"
     .footer-flex
         display: flex

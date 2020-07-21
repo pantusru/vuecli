@@ -44,7 +44,6 @@ export default {
 </script>
 
 <style lang="sass">
-    @import "@/sass/smart-grid"
     .section-index
         display: flex
         justify-content: space-between

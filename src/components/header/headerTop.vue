@@ -36,7 +36,6 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "@/sass/smart-grid"
   .header-top
     padding: 5px 0
     background-color: #F7F7F7
