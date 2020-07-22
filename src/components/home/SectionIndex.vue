@@ -12,17 +12,21 @@
                 <div class="mini-categoria-img"> <img src="@/assets/home-car-4.png" alt=""></div>
           </div>
       </div>
-      <div class="banner">
-          <img src="@/assets/appbanner.jpg" alt="">
-      </div>
+       <banner :img="dataImg"/>
   </section>
 </template>
 
 <script>
 import categoriaVue from '../microComponents/categoria.vue'
+import banner from "../microComponents/banner.vue"
 export default {
     data(){
         return{
+            dataImg:[
+                {src:"https://www.pantus.ru/bitrix/images/site/optbanner2.jpg", alt: "12", href:"11", id:1},
+                {src:"https://www.pantus.ru/bitrix/images/site/banner.1millionproducts.jpg", alt: "12", href:"11", id:2},
+                {src:"https://www.pantus.ru/bitrix/images/site/appbanner.jpg", alt: "12", href:"11", id:3},
+            ],
             categoriaUrl:[
                 [
                     {name: "Запчасти на Приору", href:""},
@@ -39,6 +43,7 @@ export default {
     },
     components:{
         categoriaVue:categoriaVue,
+        banner: banner,
     }
 }
 </script>
@@ -53,8 +58,6 @@ export default {
         display: grid
         grid-template-columns: 2fr 1fr
         grid-gap: 35px
-    .banner
-        +size(3)
     .blog-mini-categoria
         box-shadow: 10px 17px 30px rgba(0, 0, 0, 0.05)
 </style>

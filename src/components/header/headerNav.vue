@@ -12,14 +12,14 @@ export default {
         return{
             links:[
                 {name:"Все запчасти", href: ""},
-                {name:"Оригинальные каталоги", href: ""},     
+                {name:"Оригинальные каталоги", href: "/catalog"},     
                 {name:"Иномарки", href: ""}, 
                 {name:"ВАЗ", href: ""}, 
                 {name:"КАМАЗ", href: ""}, 
                 {name:"ГАЗ", href: ""}, 
                 {name:"РТИ", href: ""}, 
                 {name:"Популярное", href: ""}, 
-                {name:"Новинки", href: ""} 
+                {name:"Новинки", href: "/product"} 
             ]
         }
     }

@@ -9,6 +9,7 @@
       <SectionAdvantageVue/>
       <SectionPopularVue/>
       <SectionNews/>
+      <SectionAboutVue/>
     </div>
   </div>
 </template>
@@ -25,9 +26,10 @@ import SectionContentVue from '../components/home/SectionContent.vue';
 import SectionAdvantageVue from '../components/home/SectionAdvantage.vue';
 import SectionPopularVue from '../components/home/SectionPopular.vue';
 import  SectionNews from '../components/home/SectionNews.vue';
-
+ 
 
 import { RepositoryFactory } from './../axios/RepositoryFactory'
+import SectionAboutVue from '../components/home/SectionAbout.vue';
 const UserRepository = RepositoryFactory.get('user')
 export default {
   
@@ -46,6 +48,7 @@ export default {
     SectionAdvantageVue: SectionAdvantageVue,
     SectionPopularVue: SectionPopularVue,
     SectionNews: SectionNews,
+    SectionAboutVue: SectionAboutVue,
     
   },
   created () {
