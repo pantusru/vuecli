@@ -1,6 +1,8 @@
 import UserRepository from "./User";
+import ProductRepository from "./Product";
 const repositories = {
   user: UserRepository,
+  product: ProductRepository,
   // other repositories ...
 };
 

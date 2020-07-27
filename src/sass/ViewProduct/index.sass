@@ -1,0 +1,37 @@
+.section-product
+    .elem-product
+        width: 100%
+        display: flex
+        justify-content: space-between
+        position: relative
+        &::after
+            content: ""
+            display: block
+            width: 96%
+            height: 1px
+            background: #a6a6a6
+            position: absolute
+            top: 13px
+            left: 0
+    .elem-name
+        font-weight: 700
+        font-size: 12px
+    .elem-name, .elem-val
+        background: #fff
+        position: relative
+        z-index: 2
+    .elem-val
+        font-size: 12px
+        color: #666666
+    .bnt-buy
+        background-color: #e1002b
+        color: #fff
+        border-radius: 3px
+        padding: 4px 8px
+        border: 2px solid #e1002b
+        margin-right: 5px
+        text-align: center
+    .row-blog
+        display: block
+        border: 1px solid #e1e1e1
+        margin-bottom: 30px

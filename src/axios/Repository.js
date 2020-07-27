@@ -7,7 +7,7 @@ const baseURL = `${baseDomain}`;
 
 export default axios.create({
   baseURL,
-  headers:{
-    'authorization': localStorage.getItem('token') || ''
+  headers: {
+    authorization: localStorage.getItem("token") || ""
   }
 });

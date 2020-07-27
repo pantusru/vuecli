@@ -1,53 +1,46 @@
 <template>
   <div class="banner">
-      <div class="banner-box">
-            <a  class="banner_img" :href="data.href" v-for="data in img" :key="data.id" :class="[{show: data.id == idActiv }]">
-                <img :src="data.src" :alt="data.alt">
-          </a>
-      </div>
-    </div>
+    <VueSlickCarousel v-bind="Settings">
+      <a
+        class="banner_img"
+         
+        v-for="data in img"
+        :key="data.id"
+      >
+        <img :src="data.src" :alt="data.alt" />
+      </a>
+    </VueSlickCarousel>
+  </div>
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 export default {
-    props:["img"],
-    data(){
-        return{
-            idActiv: 1,
-            margin: 25
-            
-        }
-    },
-    methods:{
-        check: function() {
-            if(this.idActiv == this.img.length) {
-                this.idActiv = 1;
-            }else{
-                this.idActiv++;
-            }
-        }
-    },
-    created(){
-        setInterval(() => {
-            this.check();
-        }, 3000);
-    },
-    computed:{
-        
+  props: ["img"],
+  components: { VueSlickCarousel },
+  data(){
+    return{
+      Settings:{
+         "fade": true,
+          "arrows": false,
+          "infinite": true,
+          "slidesToShow": 1,
+          "slidesToScroll": 1,
+          "autoplay": true,
+          "speed": 2000,
+          "autoplaySpeed": 2000,
+      }
     }
-}
+  }
+};
 </script>
 
 <style lang="sass">
-    .banner
-        +size(3)
-    .banner-box
-        transition: all 2s ease
-        position: relative
-        display: flex
-        justify-content: flex-start
-    .banner_img
-        display: none
-    .show
-        display: block
+.banner
+    +size(3)
+ 
 </style>

@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Catalog from "../views/Catalog.vue"
-import Product from "../views/Product.vue"
+import Catalog from "../views/Catalog.vue";
+import Product from "../views/Product.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,8 +20,7 @@ const routes = [
     path: "/product",
     name: "Product",
     component: Product
-  },
-
+  }
 ];
 
 const router = new VueRouter({

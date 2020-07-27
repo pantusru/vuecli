@@ -1,9 +1,9 @@
 module.exports = {
-    css: {
-      loaderOptions: {
-        sass: {
-          prependData: `@import "@/sass/smart-grid.sass";`
-        }
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/sass/smart-grid.sass";`
       }
     }
-  };
+  }
+};

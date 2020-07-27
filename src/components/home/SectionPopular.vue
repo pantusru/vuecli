@@ -1,132 +1,81 @@
 <template>
-    <section class="section-popular">
-        <h2 class="title-blog">Популярные товары</h2>
-            <div class="blog-popular">
-                <productPopular 
-                    v-for="data in product"
-                    :key="data.id" 
-                    :title="data.title" 
-                    :brand="data.brand"
-                    :alt="data.alt"
-                    :art="data.art"    
-                    :OEM ="data.OEM"
-                    :hreF="data.hreF"
-                    :src="data.src"
-                    :price="data.price"
-                    :kolvo="data.kolvo"
-
-                />
-            </div>
-            <div class="link-more-center">
-                <button class="link-more">ПОСМОТРЕТЬ ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ </button>
-            </div>
-    </section>
+  <section class="section-popular">
+    <h2 class="title-blog">Популярные товары</h2>
+    <VueSlickCarousel class="blog-popular" v-bind="settings">
+      <productPopular    
+        v-for="data in product"
+        :key="data.id"
+        :arr = data
+      />
+    </VueSlickCarousel>
+    <div class="link-more-center">
+      <button class="link-more">ПОСМОТРЕТЬ ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</button>
+    </div>
+  </section>
 </template>
 
 <script>
-import productPopular from '../microComponents/productPopular.vue'
+import VueSlickCarousel from 'vue-slick-carousel'
+import productPopular from "../microComponents/productPopular.vue";
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import { RepositoryFactory } from "./../../axios/RepositoryFactory";
+// import slickVue from '../microComponents/slick.vue';
+const ProductRepository = RepositoryFactory.get("product");
+
+
 export default {
-    data(){
-        return{
-            product:[
-                {
-                    title:"dsadsasda34", 
-                    brand: "Балаково", 
-                    src:"https://www.pantus.ru/upload/iblock/61a/1101%20-%20%D0%9E%D0%BF%D0%BE%D1%80%D0%B0%20%D1%81%D1%82%D0%BE%D0%B9%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B9%20%D0%92%D0%90%D0%97%202108%20%D0%AD%D0%9A%D0%A1%D0%9F%D0%95%D0%A0%D0%A2%20-%20%D0%A1%D1%8D%D0%B2%D0%B8.jpg",
-                    alt: "123",
-                    art: "23141532-12314",
-                     price: 500,
-                      kolvo: 450,
-                    OEM:[
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                    ],
-                    hreF:{
-                        brand: "brandName",
-                        art: "artName"
-                    }
-                },
-                 {
-                    title:"dsadsasda34", 
-                    brand: "Балаково", 
-                    src:"https://www.pantus.ru/upload/iblock/61a/1101%20-%20%D0%9E%D0%BF%D0%BE%D1%80%D0%B0%20%D1%81%D1%82%D0%BE%D0%B9%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B9%20%D0%92%D0%90%D0%97%202108%20%D0%AD%D0%9A%D0%A1%D0%9F%D0%95%D0%A0%D0%A2%20-%20%D0%A1%D1%8D%D0%B2%D0%B8.jpg",
-                    alt: "123",
-                    art: "23141532-12314",
-                     price: 500,
-                     kolvo: 450,
-                    OEM:[
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                    ],
-                    hreF:{
-                        brand: "brandName",
-                        art: "artName"
-                    }
-                },
-                 {
-                    title:"dsadsasda34", 
-                    brand: "Балаково", 
-                    src:"https://www.pantus.ru/upload/iblock/61a/1101%20-%20%D0%9E%D0%BF%D0%BE%D1%80%D0%B0%20%D1%81%D1%82%D0%BE%D0%B9%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B9%20%D0%92%D0%90%D0%97%202108%20%D0%AD%D0%9A%D0%A1%D0%9F%D0%95%D0%A0%D0%A2%20-%20%D0%A1%D1%8D%D0%B2%D0%B8.jpg",
-                    alt: "123",
-                    art: "23141532-12314",
-                    price: 500,
-                    kolvo: 450,
-                    OEM:[
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                    ],
-                    hreF:{
-                        brand: "brandName",
-                        art: "artName"
-                    }
-                },
-                {
-                    title:"dsadsasda34", 
-                    brand: "Балаково", 
-                    src:"https://www.pantus.ru/upload/iblock/61a/1101%20-%20%D0%9E%D0%BF%D0%BE%D1%80%D0%B0%20%D1%81%D1%82%D0%BE%D0%B9%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B9%20%D0%92%D0%90%D0%97%202108%20%D0%AD%D0%9A%D0%A1%D0%9F%D0%95%D0%A0%D0%A2%20-%20%D0%A1%D1%8D%D0%B2%D0%B8.jpg",
-                    alt: "123",
-                    art: "23141532-12314",
-                    price: 400,
-                    kolvo: 300,
-                    OEM:[
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                        {name: "32134", href:"href12"},
-                    ],
-                    hreF:{
-                        brand: "brandName",
-                        art: "artName"
-                    }
-                },
-            ]
-        }
-    },
-    components:{
-        productPopular: productPopular,
+  data() {
+    return {
+      settings:{
+          "arrows": true,
+          "focusOnSelect": true,
+          "infinite": true,
+          "speed": 500,
+          "slidesToShow": 4,
+          "slidesToScroll": 4,
+      },  
+     product: 0
     }
-}
+  },  
+  components: {
+    productPopular: productPopular,
+    // slickVue:slickVue,
+    VueSlickCarousel:VueSlickCarousel,
+  },
+    created() {
+    this.fetch();
+  },
+  methods: {
+    async fetch() {
+       await ProductRepository.popular().then(response =>{
+          this.$store.commit("setProductPopular", response.data.data);
+          this.product = this.$store.getters.getProductPopular;
+       })     
+    }
+  }
+};
 </script>
 
 <style lang="sass">
-    .title-blog
-        color: #2e414d
-        font-size: 24px
-        margin-bottom: 30px
-    .blog-popular
-        display: flex
-        justify-content: space-between
-    .link-more-center
-        margin-top: 30px
-        text-align: center
-        .link-more
-            color: #666
-            font-size: 14px
+.title-blog
+    color: #2e414d
+    font-size: 24px
+    margin-bottom: 30px
+.blog-popular
+  .slick-track
+    display: flex !important
+    margin: 0 -20px
+  .slick-slide
+    height: inherit !important
+    [data-v-e4caeaf8]
+      height: 100%
+      margin: 0 20px
+.link-more-center
+    margin-top: 30px
+    text-align: center
+    .link-more
+        color: #666
+        font-size: 14px
 </style>

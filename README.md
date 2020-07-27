@@ -1,4 +1,4 @@
-# pantus-full
+# pantus
 
 ## Project setup
 ```
