@@ -12,10 +12,10 @@
       </a>
     </div>
     <div class="footer-blog-app">
-      <a href="#" class="footer-app-svg"
+      <a href="" class="footer-app-svg"
         ><img src="img/googleplay.svg" alt=""
       /></a>
-      <a href="#" class="footer-app-svg"
+      <a href="" class="footer-app-svg"
         ><img src="img/appstore.svg" alt=""
       /></a>
     </div>
@@ -38,10 +38,10 @@ export default {
   data() {
     return {
       linksImg: [
-        { src: "img/vk.png", href: "#", alt: "11" },
-        { src: "img/youtub.png", href: "#", alt: "22" },
-        { src: "img/instargam.png", href: "#", alt: "33" },
-        { src: "img/telegram3.png", href: "#", alt: "33" }
+        { src: "img/vk.png", href: "", alt: "11" },
+        { src: "img/youtub.png", href: "", alt: "22" },
+        { src: "img/instargam.png", href: "", alt: "33" },
+        { src: "img/telegram3.png", href: "", alt: "33" }
       ]
     };
   }

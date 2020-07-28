@@ -9,7 +9,7 @@
       />
       <div class="blog-mini-categoria">
         <h2>
-          <a href="#" class="categoria-title link-hover">Шланги поливочные</a>
+          <a href="" class="categoria-title link-hover">Шланги поливочные</a>
         </h2>
         <div class="mini-categoria-img">
           <img src="@/assets/home-car-2.png" alt="" />
@@ -23,7 +23,7 @@
       />
       <div class="blog-mini-categoria">
         <h2>
-          <a href="#" class="categoria-title link-hover">Запчасти Renault</a>
+          <a href="" class="categoria-title link-hover">Запчасти Renault</a>
         </h2>
         <div class="mini-categoria-img">
           <img src="@/assets/home-car-4.png" alt="" />

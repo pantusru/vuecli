@@ -16,7 +16,7 @@
     />
     <div class="col-6 bg-red ">
       <h2>
-        <a href="#" class="categoria-title"
+        <a href="" class="categoria-title"
           >Автомасла автокосметика автохимия</a
         >
       </h2>

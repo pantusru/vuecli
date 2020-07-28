@@ -8,7 +8,7 @@
     </div>
     <div class="blog-brand">
       <h2>
-        <a href="#" class="title-content link-hover ">Бренды запчастей</a>
+        <a href="" class="title-content link-hover ">Бренды запчастей</a>
       </h2>
       <table class="table-brand">
         <tbody>

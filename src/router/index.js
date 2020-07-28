@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Catalog from "../views/Catalog.vue";
 import Product from "../views/Product.vue";
+import News from "../views/News.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,11 +21,23 @@ const routes = [
     path: "/product",
     name: "Product",
     component: Product
-  }
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News
+  },
+  {
+    path: "/news/:name",
+    name: "News",
+    component: News
+  },
+
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode:'history'
 });
 
 export default router;

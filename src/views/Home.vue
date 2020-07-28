@@ -28,7 +28,6 @@ import SectionPopularVue from "../components/home/SectionPopular.vue";
 import SectionNews from "../components/home/SectionNews.vue";
 import SectionAboutVue from "../components/home/SectionAbout.vue";
 
- 
 export default {
   name: "Home",
   data() {
@@ -44,6 +43,6 @@ export default {
     SectionPopularVue: SectionPopularVue,
     SectionNews: SectionNews,
     SectionAboutVue: SectionAboutVue
-  },
+  }
 };
 </script>

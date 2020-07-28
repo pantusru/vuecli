@@ -4,11 +4,21 @@
       <div class="header-top-coll">
         <nav class="nav-top">
           <div class="box-company">
-            <span class="link-top link-hover focusPopul" v-on:click="getPopul" >О компании</span>
-            <div class="blog-popup" :class="{activ: this.$store.state.checkPop.NavTop}">
-                <a class="popul-link" :href="data.href" v-for="data in popList" :key="data.id">
-                    {{ data.name}}
-                </a>
+            <span class="link-top link-hover focusPopul" v-on:click="getPopul"
+              >О компании</span
+            >
+            <div
+              class="blog-popup"
+              :class="{ activ: this.$store.state.checkPop.NavTop }"
+            >
+              <router-link
+                class="popul-link"
+                :to="data.href"
+                v-for="data in popList"
+                :key="data.id"
+              >
+                {{ data.name }}
+              </router-link>
             </div>
           </div>
           <router-link
@@ -40,28 +50,28 @@ export default {
         { name: "Опт", href: "" },
         { name: "Доставка", href: "" },
         { name: "Оплата ", href: "" },
-        { name: "Новости", href: "" },
+        { name: "Новости", href: "/news" },
         { name: "Помощь", href: "" },
         { name: "Контакты", href: "" }
       ],
-      popList:[
-        {name: "О компании", href: "1" },
-        {name: "Работа в компании", href: "1" },
-        {name: "Опт", href: "1" },
-        {name: "Поставщикам", href: "" },
-        {name: "Документы и реквизиты", href: "1" },
-        {name: "Дилерская сертификация", href: "1" },
+      popList: [
+        { name: "О компании", href: "1" },
+        { name: "Работа в компании", href: "1" },
+        { name: "Опт", href: "1" },
+        { name: "Поставщикам", href: "" },
+        { name: "Документы и реквизиты", href: "1" },
+        { name: "Дилерская сертификация", href: "1" }
       ]
     };
   },
-  methods:{
-    getPopul(){
-      if(this.$store.state.checkPop.NavTop){
+  methods: {
+    getPopul() {
+      if (this.$store.state.checkPop.NavTop) {
         this.$store.state.checkPop.NavTop = false;
-      }else{
+      } else {
         this.$store.state.checkPop.NavTop = true;
       }
-    },
+    }
   }
 };
 </script>
@@ -111,5 +121,4 @@ export default {
   font-size: 13px
   &:hover
     background: #f1f3f4
-      
 </style>

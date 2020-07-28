@@ -34,13 +34,13 @@ export default {
     headerNav: headerNavVue,
     footerMainVue: footerMainVue
   },
-  methods:{
-    OffPopul (event){
-              console.log(event.target.className)
-      if(event.target.className != "link-top link-hover focusPopul"){
+  methods: {
+    OffPopul(event) {
+      console.log(event.target.className);
+      if (event.target.className != "link-top link-hover focusPopul") {
         this.$store.state.checkPop.NavTop = false;
-      } 
-      if(event.target.className != "focusPopul link-nav"){
+      }
+      if (event.target.className != "focusPopul link-nav") {
         this.$store.state.checkPop.NavAll = false;
       }
     }

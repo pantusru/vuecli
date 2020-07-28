@@ -1,22 +1,20 @@
 <template>
-    <VueSlickCarousel v-bind="settings">
-        <slot></slot>
-    </VueSlickCarousel>
+  <VueSlickCarousel v-bind="settings">
+    <slot></slot>
+  </VueSlickCarousel>
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   components: {
-    VueSlickCarousel:VueSlickCarousel,
+    VueSlickCarousel: VueSlickCarousel
   },
-  props:["settings"]
-}
+  props: ["settings"]
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

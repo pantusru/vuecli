@@ -8,25 +8,25 @@ export default new Vuex.Store({
     status: "",
     token: localStorage.getItem("token") || "",
     user: {},
-    checkPop:{
-      NavTop:false,
-      NavAll:false,
+    checkPop: {
+      NavTop: false,
+      NavAll: false
     },
     productPopular: 0
   },
   mutations: {
-    setProductPopular: (state,data) =>{
-        state.productPopular = data;
+    setProductPopular: (state, data) => {
+      state.productPopular = data;
+    }
+  },
+  getters: {
+    getProductPopular: state => {
+      return state.productPopular;
     },
- },
- getters:{
-     getProductPopular: state => {
-        return state.productPopular
-     },
-     getcheckNavTopPop: state =>{
-      return state.checkNavTopPop
-     }
- },
+    getcheckNavTopPop: state => {
+      return state.checkNavTopPop;
+    }
+  },
   actions: {},
   modules: {}
 });

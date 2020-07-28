@@ -2,29 +2,30 @@
   <div class="elem-news">
     <div class="blog-elem-new">
       <div class="img-new">
-        <img :src="img" alt="11" />
+        <img :src="data.img" alt="11" />
       </div>
       <div class="content-new">
         <div class="data-new">
-          <div class="date-day-new">{{ day }}</div>
-          <div class="date-year-new">{{ year }}</div>
+          <div class="date-day-new">{{ data.day }}</div>
+          <div class="date-year-new">{{ data.year }}</div>
         </div>
-        <a :href="href" class="title-new"> {{ title }} </a>
-      </div>
+        <router-link :to="data.href" class="title-new"> {{ data.title }} </router-link>
+      </div> 
     </div>
-    <div class="text-new">{{ text }}</div>
+    <div class="text-new">{{ data.text }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["img", "title", "year", "day", "text", "href"]
+  props: ["data"] 
 };
 </script>
 
 <style lang="sass">
 .elem-news
     +size(4)
+    +col-offsets(margin)
     margin-bottom: 50px
 .blog-elem-new
     display: flex

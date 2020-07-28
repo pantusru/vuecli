@@ -7,11 +7,7 @@
     <div class="blog-dealerts">
       <VueSlickCarousel v-bind="Settings" class="banner-dealerts">
         <div class="dealerts-img" v-for="data in img" :key="data.id">
-              <img
-              :src="data.src"
-              :alt="data.alt"
-              :data-id="data.id"
-            />
+          <img :src="data.src" :alt="data.alt" :data-id="data.id" />
         </div>
       </VueSlickCarousel>
     </div>
@@ -19,24 +15,23 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
-  components:{
-    VueSlickCarousel:VueSlickCarousel,
+  components: {
+    VueSlickCarousel: VueSlickCarousel
   },
   data() {
     return {
-      Settings:{
-        "speed": 500,
-        "slidesToShow": 7,
-        "arrows": true,
-         "infinite": true,
-        "initialSlide": 4,  
-          "swipeToSlide": true
-
+      Settings: {
+        speed: 500,
+        slidesToShow: 7,
+        arrows: true,
+        infinite: true,
+        initialSlide: 4,
+        swipeToSlide: true
       },
       img: [
         { src: "img/trek.png", alt: "", id: "1" },
@@ -66,18 +61,18 @@ export default {
       ]
     };
   }
-}
+};
 </script>
 
 <style lang="sass">
-  .dealerts-img
-    img
-      pointer-events: none  
-      margin: 0 50px
-      width: 70%
-  .title-dealers
-      text-align: center
-      margin-bottom: 30px
-  .slick-prev:before, .slick-next:before
-    color: black
+.dealerts-img
+  img
+    pointer-events: none
+    margin: 0 50px
+    width: 70%
+.title-dealers
+    text-align: center
+    margin-bottom: 30px
+.slick-prev:before, .slick-next:before
+  color: black
 </style>

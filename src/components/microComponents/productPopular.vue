@@ -1,28 +1,29 @@
 <template>
   <div class="elem-product-popular">
     <div class="content-product-popular">
-      <h2 class=""> <a href="" class="title-product-popular"> {{ arr.productname }}</a></h2>
+      <h2 class="">
+        <a  class="title-product-popular"> {{ arr.name }}</a>
+      </h2>
       <div class="img-product-popular">
-        <img :src="arr.img" alt="12" />
+        <img :src="arr.images.main" alt="12" />
       </div>
       <div class="row-product-popular">
         <div class="column-product-popular">Бренд</div>
-        <a   class="column-result-product-popular">{{
-          arr.manufacturername
-        }}</a>
+        <a  :href="arr.manufacturer.code" class="column-result-product-popular">{{ arr.manufacturer.name }}</a>
       </div>
       <div class="row-product-popular">
         <div class="column-product-popular">Артикуль</div>
-        <a  :href="arr.articul.custom" class="column-result-product-popular">{{ arr.articul.origin }}</a>
+        <a :href="arr.sku.custom" class="column-result-product-popular">{{
+          arr.sku.origin
+        }}</a>
       </div>
       <div class="row-product-popular">
         <div class="column-product-popular">OEM</div>
         <div class="blog-result-product-popular">
           <a
-            :href="data"
-             class="column-result-product-popular"
-            v-for="data in arr.oem"
-            :key="data.id"
+            class="column-result-product-popular"
+            v-for="(data, index) in arr.oem.list.slice(0, 5)"
+            :key="index"
           >
             {{ data }}
           </a>
@@ -32,7 +33,7 @@
     <div class="data-product-popular">
       <div class="blog-price-product-popular">
         <div class="name-price-product-popular">Цена</div>
-        <div class="value-price-product-popular">{{ arr.priceretail }} Р</div>
+        <div class="value-price-product-popular">{{ arr.offer.prices.retail }} Р</div>
       </div>
       <div class="blog-content-product-popular">
         <div class="kolvo-product-popular">{{ arr.quantity }} шт</div>
@@ -44,9 +45,7 @@
 
 <script>
 export default {
-  props: [
-   "arr"
-  ],
+  props: ["arr"]
 };
 </script>
 
@@ -65,6 +64,7 @@ export default {
     font-size: 16px
     color: #436174
     font-weight: 500
+    margin-bottom: 10px
 .row-product-popular
     display: flex
     margin-bottom: 15px
@@ -115,4 +115,12 @@ export default {
     padding: 4px 8px
     border: 2px solid #e1002b
     margin-top: 10px
+.img-product-popular
+  margin-right: auto
+  margin-left: auto
+  max-width: 50%
+  height: 120px
+  margin-bottom: 10px 
+  img 
+    height: 100%
 </style>

@@ -12,11 +12,11 @@
             <img src="@/assets/icon-avatar.png" alt="" />
           </div>
           <div class="auth-blog">
-            <a href="#" class="auth-elem">Вход</a>
-            <a href="#" class="auth-elem">Регистрация</a>
+            <a href="" class="auth-elem">Вход</a>
+            <a href="" class="auth-elem">Регистрация</a>
           </div>
         </div>
-        <a href="#" class="user-elem link-hover">
+        <a href="" class="user-elem link-hover">
           <div class="user-img">
             <img src="@/assets/icon-shopping-cart.png" alt="" />
           </div>
