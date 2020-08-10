@@ -36,7 +36,7 @@
         <div class="value-price-product-popular">{{ arr.offer.prices.retail }} Р</div>
       </div>
       <div class="blog-content-product-popular">
-        <div class="kolvo-product-popular">{{ arr.quantity }} шт</div>
+        <div class="kolvo-product-popular">{{ arr.offer.quantity }} шт</div>
         <button class="btn-buy-product-popular">Купить</button>
       </div>
     </div>

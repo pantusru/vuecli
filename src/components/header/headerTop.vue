@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       linkTop: [
-        // { name: "О компании", href: "" },
+        { name: "О компании", href: "" },
         { name: "Мобильное приложение", href: "" },
         { name: "Опт", href: "" },
         { name: "Доставка", href: "" },
